@@ -1,0 +1,27 @@
+--Here we start with hello world
+#Hello-world 
+
+public ActionResult Message()
+{
+   return view("Hello World!!");
+}
+
+Next step ,pass the msg as id in the url
+
+@Html.ActionLink("click","Message","Person", new { id = "Hello World!!"});
+
+After , the thing is controller action in...
+
+public ActionResult Message(string id)
+{
+   return view(id);                               //pass the recieved message to view
+}
+
+and view here ,
+
+@model string
+
+<h2>@Model</h2>
+
+
+the important thing is read here....
